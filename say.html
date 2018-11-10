@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+
+<html>
+<body>
+<input id="ohhi">
+<textarea id="myMail">
+Hi!.........
+</textarea>
+<button onclick="goMail()" size="180">Whom to Mail?</button>
+</body>
+</html>
+<p id="ww"></p>
+<script>
+function goMail() {
+    var email = prompt("Your Email", "");
+	if (email != null) {
+	    document.getElementById("ww").innerHTML = var link = "mailto:"+email
+		      + "&body=" + escape(document.getElementById('myMail').value)
+	;
+	
+	window.location.href = link;
+}
